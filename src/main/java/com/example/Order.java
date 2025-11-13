@@ -58,7 +58,7 @@ public class Order {
                 '}';
     }
 
-    public double getTotalPrice(){
+    public double getTotalPrice() {
         return quantity * unitPrice;
 
     }

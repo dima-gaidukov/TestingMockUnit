@@ -30,19 +30,6 @@ public class OrderService {
 
     }
 
-//    public String processOrder(Order order) {
-//        if (order == null) {
-//            return "fail";
-//        }
-//        int orderId = orderRepository.saveOrder(order);
-//        if (orderId > 0) {
-//            return "success";
-//        } else {
-//            return "fail";
-//        }
-//
-//    }
-
     public double calculateTotal(int id) {
 
         Optional<Order> orderOptional = orderRepository.getOrderById(id);

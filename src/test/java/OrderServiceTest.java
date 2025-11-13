@@ -2,8 +2,6 @@ import com.example.Order;
 import com.example.OrderRepository;
 import com.example.OrderService;
 import org.junit.jupiter.api.*;
-import org.mockito.internal.matchers.Or;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Optional;
 
@@ -62,22 +60,6 @@ public class OrderServiceTest {
         verify(orderRepository, times(1)).saveOrder(order);
 
     }
-
-//    @Test
-//    void exeptionProcessOrder() {
-//        //Arrange
-//        Order order = new Order(3, "iphone", 1, 3000);
-//        when(orderRepository.saveOrder(order)).thenThrow(new RuntimeException("Data base error"));
-//
-//        //Act
-//        Exception exception = assertThrows(RuntimeException.class, () -> orderService.processOrder(order));
-//
-//        //Assert
-//        assertEquals("Data base error", exception.getMessage());
-//
-//        //verify
-//        verify(orderRepository, times(1)).saveOrder(order);
-//    }
 
     @Test
     void exeptionProcessOrder() {
